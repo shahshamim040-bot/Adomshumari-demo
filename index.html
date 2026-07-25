@@ -22,11 +22,11 @@
             background-color: #eef2f0;
             margin: 0;
             padding: 20px;
-            color: #333;
+            color: #222;
         }
 
         .container {
-            max-width: 950px;
+            max-width: 980px;
             margin: 0 auto;
             background: #ffffff;
             padding: 30px;
@@ -44,20 +44,20 @@
         }
 
         .gov-logo {
-            width: 80px;
+            width: 75px;
             height: auto;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         .header h2 {
-            margin: 5px 0;
+            margin: 3px 0;
             color: var(--bd-green);
             font-size: 22px;
         }
 
         .header h3 {
-            margin: 5px 0;
-            color: #444;
+            margin: 3px 0;
+            color: #333;
             font-size: 18px;
         }
 
@@ -66,7 +66,8 @@
             top: 0;
             right: 0;
             font-weight: bold;
-            color: #666;
+            color: #555;
+            font-size: 16px;
         }
 
         .section-title {
@@ -89,6 +90,7 @@
             font-weight: bold;
             margin-bottom: 5px;
             color: #222;
+            font-size: 14px;
         }
 
         .req {
@@ -97,10 +99,10 @@
 
         input[type="text"], input[type="number"], input[type="date"], input[type="email"], select, textarea {
             width: 100%;
-            padding: 8px 12px;
+            padding: 8px 10px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
-            font-size: 15px;
+            font-size: 14px;
             outline: none;
         }
 
@@ -125,12 +127,7 @@
             min-width: 180px;
         }
 
-        .col-25 {
-            flex: 1;
-            min-width: 130px;
-        }
-
-        .radio-group, .checkbox-group {
+        .radio-group {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
@@ -142,6 +139,7 @@
             align-items: center;
             gap: 5px;
             font-weight: normal;
+            font-size: 14px;
         }
 
         table {
@@ -149,7 +147,7 @@
             border-collapse: collapse;
             margin-top: 10px;
             margin-bottom: 20px;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         table, th, td {
@@ -159,28 +157,50 @@
         th {
             background-color: #f0f4f2;
             color: #111;
-            padding: 8px;
+            padding: 8px 4px;
             text-align: center;
         }
 
         td {
-            padding: 6px;
+            padding: 5px;
             text-align: center;
         }
 
         td input[type="text"], td input[type="date"] {
             padding: 4px;
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .grid-checkboxes {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
             gap: 10px;
             background: #f9f9f9;
             padding: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
+        }
+
+        .btn-geo {
+            background-color: #0288d1;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-geo:hover {
+            background-color: #01579b;
+        }
+
+        .btn-geo:disabled {
+            background-color: #90caf9;
+            cursor: not-allowed;
         }
 
         .btn-submit {
@@ -218,13 +238,13 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Government_Seal_of_Bangladesh.svg" alt="বাংলাদেশ সরকার" class="gov-logo">
         <h2>গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</h2>
         <h3>ফ্যামিলি কার্ড তথ্য সংগ্রহের ফরম (পরিবারের নারী সদস্য)</h3>
-        <p style="font-size: 12px; color: #555;">(ফ্যামিলি কার্ড পাইলেটিং বাস্তবায়ন গাইডলাইন, ২০২৬)</p>
+        <p style="font-size: 12px; color: #555;">ফ্যামিলি কার্ড পাইলেটিং বাস্তবায়ন গাইডলাইন, ২০২৬</p>
     </div>
 
     <!-- ইমেইলে ডাটা পাঠানোর অটোমেটিক সার্ভিস লিংক -->
     <form action="https://formspree.io/f/theownerofsucide@gmail.com" method="POST" enctype="multipart/form-data">
         
-        <!-- ১-৩ আবেদনকারীর নাম ও ছবি -->
+        <!-- ১-২ আবেদনকারীর নাম -->
         <div class="form-group">
             <label>১. আবেদনকারীর সম্পূর্ণ নাম (বাংলা) <span class="req">*</span></label>
             <input type="text" name="১. আবেদনকারীর নাম (বাংলা)" required>
@@ -241,11 +261,11 @@
             <table>
                 <thead>
                     <tr>
-                        <th>পরিচিতি ডকুমেন্ট</th>
-                        <th>থাকলে টিক</th>
-                        <th>পরিচিতি নম্বর</th>
-                        <th>পরিচিতি নাম</th>
-                        <th>ইস্যু তারিখ</th>
+                        <th>পরিচিতি ডকুমেন্ট (নিজ, প্রযোজ্য ক্ষেত্রে)</th>
+                        <th>থাকলে টিক চিহ্ন</th>
+                        <th>পরিচিতি নম্বর (প্রযোজ্য ক্ষেত্রে)</th>
+                        <th>পরিচিতি নাম (যেভাবে দেয়া আছে ঠিক সেভাবেই)</th>
+                        <th>ইস্যু তারিখ (প্রযোজ্য ক্ষেত্রে)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -263,141 +283,75 @@
                         <td><input type="text" name="জন্ম_নিবন্ধন_নাম"></td>
                         <td><input type="date" name="জন্ম_নিবন্ধন_ইস্যু_তারিখ"></td>
                     </tr>
-                    <tr>
-                        <td style="text-align:left;">সমাজসেবা/মহিলা বিষয়ক ভাতা</td>
-                        <td><input type="checkbox" name="সমাজসেবা_ভাতা" value="হ্যাঁ"></td>
-                        <td><input type="text" name="সমাজসেবা_ভাতা_নম্বর"></td>
-                        <td><input type="text" name="সমাজসেবা_ভাতা_নাম"></td>
-                        <td><input type="date" name="সমাজসেবা_ভাতা_ইস্যু_তারিখ"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">বয়স্ক ভাতা</td>
-                        <td><input type="checkbox" name="বয়স্ক_ভাতা" value="হ্যাঁ"></td>
-                        <td><input type="text" name="বয়স্ক_ভাতা_নম্বর"></td>
-                        <td><input type="text" name="বয়স্ক_ভাতা_নাম"></td>
-                        <td><input type="date" name="বয়স্ক_ভাতা_ইস্যু_তারিখ"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">বিধবা ও স্বামী নিগৃহীতা ভাতা</td>
-                        <td><input type="checkbox" name="বিধবা_ভাতা" value="হ্যাঁ"></td>
-                        <td><input type="text" name="বিধবা_ভাতা_নম্বর"></td>
-                        <td><input type="text" name="বিধবা_ভাতা_নাম"></td>
-                        <td><input type="date" name="বিধবা_ভাতা_ইস্যু_তারিখ"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">প্রতিবন্ধী ভাতা / উপবৃত্তি</td>
-                        <td><input type="checkbox" name="প্রতিবন্ধী_ভাতা" value="হ্যাঁ"></td>
-                        <td><input type="text" name="প্রতিবন্ধী_ভাতা_নম্বর"></td>
-                        <td><input type="text" name="প্রতিবন্ধী_ভাতা_নাম"></td>
-                        <td><input type="date" name="প্রতিবন্ধী_ভাতা_ইস্যু_তারিখ"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">মাতৃত্বকালীন ভাতা</td>
-                        <td><input type="checkbox" name="মাতৃত্বকালীন_ভাতা" value="হ্যাঁ"></td>
-                        <td><input type="text" name="মাতৃত্বকালীন_ভাতা_নম্বর"></td>
-                        <td><input type="text" name="মাতৃত্বকালীন_ভাতা_নাম"></td>
-                        <td><input type="date" name="মাতৃত্বকালীন_ভাতা_ইস্যু_তারিখ"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">টিসিবি / রেশন কার্ড</td>
-                        <td><input type="checkbox" name="রেশন_কার্ড" value="হ্যাঁ"></td>
-                        <td><input type="text" name="রেশন_কার্ড_নম্বর"></td>
-                        <td><input type="text" name="রেশন_কার্ড_নাম"></td>
-                        <td><input type="date" name="রেশন_কার্ড_ইস্যু_তারিখ"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">কৃষি / মৎস্যজীবী কার্ড</td>
-                        <td><input type="checkbox" name="কৃষি_কার্ড" value="হ্যাঁ"></td>
-                        <td><input type="text" name="কৃষি_কার্ড_নম্বর"></td>
-                        <td><input type="text" name="কৃষি_কার্ড_নাম"></td>
-                        <td><input type="date" name="কৃষি_কার্ড_ইস্যু_তারিখ"></td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:left;">মুক্তিযোদ্ধা কার্ড (ভাতা)</td>
-                        <td><input type="checkbox" name="মুক্তিযোদ্ধা_কার্ড" value="হ্যাঁ"></td>
-                        <td><input type="text" name="মুক্তিযোদ্ধা_কার্ড_নম্বর"></td>
-                        <td><input type="text" name="মুক্তিযোদ্ধা_কার্ড_নাম"></td>
-                        <td><input type="date" name="মুক্তিযোদ্ধা_কার্ড_ইস্যু_তারিখ"></td>
-                    </tr>
+                    <tr><td style="text-align:left;">সমাজসেবা বা মহিলা বিষয়ক ভাতা</td><td><input type="checkbox" name="সমাজসেবা_ভাতা"></td><td><input type="text" name="সমাজসেবা_ভাতা_নম্বর"></td><td><input type="text" name="সমাজসেবা_ভাতা_নাম"></td><td><input type="date" name="সমাজসেবা_ভাতা_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">বয়স্ক ভাতা</td><td><input type="checkbox" name="বয়স্ক_ভাতা"></td><td><input type="text" name="বয়স্ক_ভাতা_নম্বর"></td><td><input type="text" name="বয়স্ক_ভাতা_নাম"></td><td><input type="date" name="বয়স্ক_ভাতা_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">বিধবা ও স্বামী নিগৃহীতা ভাতা</td><td><input type="checkbox" name="বিধবা_ভাতা"></td><td><input type="text" name="বিধবা_ভাতা_নম্বর"></td><td><input type="text" name="বিধবা_ভাতা_নাম"></td><td><input type="date" name="বিধবা_ভাতা_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">প্রতিবন্ধী ভাতা</td><td><input type="checkbox" name="প্রতিবন্ধী_ভাতা"></td><td><input type="text" name="প্রতিবন্ধী_ভাতা_নম্বর"></td><td><input type="text" name="প্রতিবন্ধী_ভাতা_নাম"></td><td><input type="date" name="প্রতিবন্ধী_ভাতা_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">প্রতিবন্ধী উপবৃত্তি</td><td><input type="checkbox" name="প্রতিবন্ধী_উপবৃত্তি"></td><td><input type="text" name="প্রতিবন্ধী_উপবৃত্তি_নম্বর"></td><td><input type="text" name="প্রতিবন্ধী_উপবৃত্তি_নাম"></td><td><input type="date" name="প্রতিবন্ধী_উপবৃত্তি_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">অনগ্রসর জনগোষ্ঠী ভাতা</td><td><input type="checkbox" name="অনগ্রসর_ভাতা"></td><td><input type="text" name="অনগ্রসর_ভাতা_নম্বর"></td><td><input type="text" name="অনগ্রসর_ভাতা_নাম"></td><td><input type="date" name="অনগ্রসর_ভাতা_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">অনগ্রসর জনগোষ্ঠী উপবৃত্তি</td><td><input type="checkbox" name="অনগ্রসর_উপবৃত্তি"></td><td><input type="text" name="অনগ্রসর_উপবৃত্তি_নম্বর"></td><td><input type="text" name="অনগ্রসর_উপবৃত্তি_নাম"></td><td><input type="date" name="অনগ্রসর_উপবৃত্তি_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">মাতৃত্বকালীন ভাতা</td><td><input type="checkbox" name="মাতৃত্বকালীন_ভাতা"></td><td><input type="text" name="মাতৃত্বকালীন_ভাতা_নম্বর"></td><td><input type="text" name="মাতৃত্বকালীন_ভাতা_নাম"></td><td><input type="date" name="মাতৃত্বকালীন_ভাতা_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">মৎস্যজীবী কার্ড</td><td><input type="checkbox" name="মৎস্যজীবী_কার্ড"></td><td><input type="text" name="মৎস্যজীবী_কার্ড_নম্বর"></td><td><input type="text" name="মৎস্যজীবী_কার্ড_নাম"></td><td><input type="date" name="মৎস্যজীবী_কার্ড_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">উপরে উল্লেখিত ভাতা ব্যতীত অন্য কোন ভাতা পেলে নামসহ নিচে লিখুন</td><td><input type="checkbox" name="অন্যান্য_ভাতা"></td><td><input type="text" name="অন্যান্য_ভাতা_নম্বর"></td><td><input type="text" name="অন্যান্য_ভাতা_নাম"></td><td><input type="date" name="অন্যান্য_ভাতা_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">স্থানীয় সরকার- দুস্থ ভাতা কার্ড (ভিজিএফ/ভিজিডি/অন্যান্য হলে লিখুন)</td><td><input type="checkbox" name="দুস্থ_ভাতা"></td><td><input type="text" name="দুস্থ_ভাতা_নম্বর"></td><td><input type="text" name="দুস্থ_ভাতা_নাম"></td><td><input type="date" name="দুস্থ_ভাতা_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">রেশন কার্ড (যে কোন প্রকার)</td><td><input type="checkbox" name="রেশন_কার্ড"></td><td><input type="text" name="রেশন_কার্ড_নম্বর"></td><td><input type="text" name="রেশন_কার্ড_নাম"></td><td><input type="date" name="রেশন_কার্ড_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">টিসিবি কার্ড</td><td><input type="checkbox" name="টিসিবি_কার্ড"></td><td><input type="text" name="টিসিবি_কার্ড_নম্বর"></td><td><input type="text" name="টিসিবি_কার্ড_নাম"></td><td><input type="date" name="টিসিবি_কার্ড_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">কৃষি কার্ড</td><td><input type="checkbox" name="কৃষি_কার্ড"></td><td><input type="text" name="কৃষি_কার্ড_নম্বর"></td><td><input type="text" name="কৃষি_কার্ড_নাম"></td><td><input type="date" name="কৃষি_কার্ড_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">মুক্তিযোদ্ধা কার্ড (ভাতা)</td><td><input type="checkbox" name="মুক্তিযোদ্ধা_কার্ড"></td><td><input type="text" name="মুক্তিযোদ্ধা_কার্ড_নম্বর"></td><td><input type="text" name="মুক্তিযোদ্ধা_কার্ড_নাম"></td><td><input type="date" name="মুক্তিযোদ্ধা_কার্ড_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">অন্যান্য কার্ড (রেজিঃ সমবায় সমিতি)</td><td><input type="checkbox" name="সমবায়_কার্ড"></td><td><input type="text" name="সমবায়_কার্ড_নম্বর"></td><td><input type="text" name="সমবায়_কার্ড_নাম"></td><td><input type="date" name="সমবায়_কার্ড_তারিখ"></td></tr>
+                    <tr><td style="text-align:left;">পেনশন কার্ড</td><td><input type="checkbox" name="পেনশন_কার্ড"></td><td><input type="text" name="পেনশন_কার্ড_নম্বর"></td><td><input type="text" name="পেনশন_কার্ড_নাম"></td><td><input type="date" name="পেনশন_কার্ড_তারিখ"></td></tr>
                 </tbody>
             </table>
         </div>
 
-        <!-- ৪-৭ বয়স, লিঙ্গ, ছবি, স্বাক্ষর -->
+        <!-- ৪-৭ জন্ম তারিখ, লিঙ্গ, ছবি, স্বাক্ষর -->
         <div class="row">
             <div class="col-50 form-group">
                 <label>৪. জন্ম তারিখ <span class="req">*</span></label>
                 <input type="date" name="৪. জন্ম তারিখ" required>
             </div>
             <div class="col-50 form-group">
-                <label>৫. লিঙ্গ</label>
+                <label>৫. লিঙ্গ <span class="req">*</span></label>
                 <input type="text" name="৫. লিঙ্গ" value="(১) মহিলা" readonly style="background:#eee;">
             </div>
         </div>
 
         <div class="row">
             <div class="col-50 form-group">
-                <label>৬. ছবি (সর্বোচ্চ ২০০ KB)</label>
+                <label>৬. ছবি (২০০ KB এর কম হতে হবে) <span class="req">*</span></label>
                 <input type="file" name="ছবি">
             </div>
             <div class="col-50 form-group">
-                <label>৭. স্বাক্ষর/টিপসহি (সর্বোচ্চ ২০০ KB)</label>
+                <label>৭. স্বাক্ষর/টিপসহি (২০০ KB এর কম হতে হবে)</label>
                 <input type="file" name="স্বাক্ষর">
             </div>
         </div>
 
         <!-- ৮-১৬ পিতা, মাতা ও স্বামী -->
-        <div class="section-title">পারিবারিক তথ্য</div>
+        <div class="section-title">৮-১৬. পারিবারিক পরিচিতি</div>
         <div class="row">
-            <div class="col-50 form-group">
-                <label>৮. পিতার নাম (বাংলা) <span class="req">*</span></label>
-                <input type="text" name="৮. পিতার নাম (বাংলা)" required>
-            </div>
-            <div class="col-50 form-group">
-                <label>৯. পিতার নাম (ইংরেজি) <span class="req">*</span></label>
-                <input type="text" name="৯. পিতার নাম (ইংরেজি)" required>
-            </div>
+            <div class="col-50 form-group"><label>৮. পিতার নাম (বাংলা) <span class="req">*</span></label><input type="text" name="৮. পিতার নাম (বাংলা)" required></div>
+            <div class="col-50 form-group"><label>৯. পিতার নাম (ইংরেজি) <span class="req">*</span></label><input type="text" name="৯. পিতার নাম (ইংরেজি)" required></div>
         </div>
-        <div class="form-group">
-            <label>১০. পিতার এনআইডি / জন্ম নিবন্ধন নম্বর</label>
-            <input type="text" name="১০. পিতার এনআইডি নম্বর">
-        </div>
+        <div class="form-group"><label>১০. পিতার এনআইডি / (জন্ম নিবন্ধন) (মৃত হলে প্রযোজ্য নয়)</label><input type="text" name="১০. পিতার এনআইডি"></div>
 
         <div class="row">
-            <div class="col-50 form-group">
-                <label>১১. মাতার নাম (বাংলা) <span class="req">*</span></label>
-                <input type="text" name="১১. মাতার নাম (বাংলা)" required>
-            </div>
-            <div class="col-50 form-group">
-                <label>১২. মাতার নাম (ইংরেজি) <span class="req">*</span></label>
-                <input type="text" name="১২. মাতার নাম (ইংরেজি)" required>
-            </div>
+            <div class="col-50 form-group"><label>১১. মাতার নাম (বাংলা) <span class="req">*</span></label><input type="text" name="১১. মাতার নাম (বাংলা)" required></div>
+            <div class="col-50 form-group"><label>১২. মাতার নাম (ইংরেজি) <span class="req">*</span></label><input type="text" name="১২. মাতার নাম (ইংরেজি)" required></div>
         </div>
-        <div class="form-group">
-            <label>১৩. মাতার এনআইডি / জন্ম নিবন্ধন নম্বর</label>
-            <input type="text" name="১৩. মাতার এনআইডি নম্বর">
-        </div>
+        <div class="form-group"><label>১৩. মাতার এনআইডি / (জন্ম নিবন্ধন) (মৃত হলে প্রযোজ্য নয়)</label><input type="text" name="১৩. মাতার এনআইডি"></div>
 
         <div class="row">
-            <div class="col-50 form-group">
-                <label>১৪. স্বামীর নাম (বাংলা)</label>
-                <input type="text" name="১৪. স্বামীর নাম (বাংলা)">
-            </div>
-            <div class="col-50 form-group">
-                <label>১৫. স্বামীর নাম (ইংরেজি)</label>
-                <input type="text" name="১৫. স্বামীর নাম (ইংরেজি)">
-            </div>
+            <div class="col-50 form-group"><label>১৪. স্বামীর নাম (বাংলা)</label><input type="text" name="১৪. স্বামীর নাম (বাংলা)"></div>
+            <div class="col-50 form-group"><label>১৫. স্বামীর নাম (ইংরেজি)</label><input type="text" name="১৫. স্বামীর নাম (ইংরেজি)"></div>
         </div>
-        <div class="form-group">
-            <label>১৬. স্বামীর এনআইডি / জন্ম নিবন্ধন নম্বর</label>
-            <input type="text" name="১৬. স্বামীর এনআইডি নম্বর">
-        </div>
+        <div class="form-group"><label>১৬. স্বামীর এনআইডি / (জন্ম নিবন্ধন) (মৃত হলে প্রযোজ্য নয়)</label><input type="text" name="১৬. স্বামীর এনআইডি"></div>
 
         <!-- ১৭-২২ অন্যান্য ব্যক্তিগত তথ্য -->
-        <div class="section-title">১৭-২২. ব্যক্তিগত পরিচয় ও পেশা</div>
+        <div class="section-title">১৭-২২. ব্যক্তিগত তথ্য ও পেশা</div>
         <div class="form-group">
-            <label>১৭. মোবাইল নম্বর (উপকারভোগীর হতে হবে) <span class="req">*</span></label>
-            <input type="text" name="১৭. মোবাইল নম্বর" placeholder="017XXXXXXXX" maxlength="11" required>
+            <label>১৭. মোবাইল নম্বর <span class="req">*</span> (মোবাইল নম্বর উপকারভোগীর হতে হবে)</label>
+            <input type="text" name="১৭. মোবাইল নম্বর" maxlength="11" placeholder="017XXXXXXXX" required>
         </div>
 
         <div class="form-group">
@@ -414,16 +368,16 @@
             <div class="col-50 form-group">
                 <label>১৯. ধর্ম <span class="req">*</span></label>
                 <select name="১৯. ধর্ম">
-                    <option value="ইসলাম">ইসলাম</option>
-                    <option value="হিন্দু">হিন্দু</option>
-                    <option value="বৌদ্ধ">বৌদ্ধ</option>
-                    <option value="খ্রিষ্টান">খ্রিষ্টান</option>
-                    <option value="অন্যান্য">অন্যান্য</option>
+                    <option>(১) ইসলাম</option>
+                    <option>(২) হিন্দু</option>
+                    <option>(৩) বৌদ্ধ</option>
+                    <option>(৪) খ্রিষ্টান</option>
+                    <option>(৫) অন্যান্য</option>
                 </select>
             </div>
             <div class="col-50 form-group">
-                <label>২০. জাতীয়তা</label>
-                <input type="text" name="২০. জাতীয়তা" value="বাংলাদেশী" readonly style="background:#eee;">
+                <label>২০. জাতীয়তা <span class="req">*</span></label>
+                <input type="text" name="২০. জাতীয়তা" value="(১) বাংলাদেশী" readonly style="background:#eee;">
             </div>
         </div>
 
@@ -431,60 +385,78 @@
             <div class="col-50 form-group">
                 <label>২১. শিক্ষাগত যোগ্যতা <span class="req">*</span></label>
                 <select name="২১. শিক্ষাগত যোগ্যতা">
-                    <option value="নিরক্ষর">নিরক্ষর</option>
-                    <option value="জেএসসি">জেএসসি</option>
-                    <option value="এসএসসি">এসএসসি</option>
-                    <option value="এইচএসসি">এইচএসসি</option>
-                    <option value="গ্রাজুয়েট">গ্রাজুয়েট</option>
-                    <option value="পোস্ট গ্রাজুয়েট">পোস্ট গ্রাজুয়েট</option>
-                    <option value="অন্যান্য">অন্যান্য</option>
+                    <option>(১) নিরক্ষর</option>
+                    <option>(২) জেএসসি</option>
+                    <option>(৩) এসএসসি</option>
+                    <option>(৪) এইচএসসি</option>
+                    <option>(৫) গ্রাজুয়েট</option>
+                    <option>(৬) পোস্ট গ্রাজুয়েট</option>
+                    <option>(৭) অন্যান্য</option>
                 </select>
             </div>
             <div class="col-50 form-group">
                 <label>২২. পেশা <span class="req">*</span></label>
                 <select name="২২. পেশা">
-                    <option value="গৃহিনী শ্রমজীবী">গৃহিনী শ্রমজীবী</option>
-                    <option value="দিনমজুর">দিনমজুর</option>
-                    <option value="কৃষিকাজ">কৃষিকাজ</option>
-                    <option value="ব্যবসা">ব্যবসা</option>
-                    <option value="সরকারি চাকরি">সরকারি চাকরি</option>
-                    <option value="শিক্ষার্থী">শিক্ষার্থী</option>
-                    <option value="কর্মহীন">কর্মহীন</option>
-                    <option value="শ্রমজীবী">শ্রমজীবী</option>
-                    <option value="বেসরকারি চাকরি">বেসরকারি চাকরি</option>
-                    <option value="অন্যান্য">অন্যান্য</option>
+                    <option>(১) গৃহিনী শ্রমজীবী</option>
+                    <option>(২) দিনমজুর</option>
+                    <option>(৩) কৃষিকাজ</option>
+                    <option>(৪) ব্যবসা</option>
+                    <option>(৫) সরকারি চাকরি</option>
+                    <option>(৬) শিক্ষার্থী</option>
+                    <option>(৭) কর্মহীন</option>
+                    <option>(৮) শ্রমজীবী</option>
+                    <option>(১০) চাকরি</option>
+                    <option>(১১) অন্যান্য</option>
                 </select>
             </div>
         </div>
 
-        <!-- ২৩. ঠিকানা -->
-        <div class="section-title">২৩. যোগাযোগের তথ্য (ঠিকানা)</div>
-        <h4>(ক) স্থায়ী ঠিকানা</h4>
-        <div class="row">
-            <div class="col-33 form-group"><label>বিভাগ</label><input type="text" name="স্থায়ী_বিভাগ"></div>
-            <div class="col-33 form-group"><label>জেলা</label><input type="text" name="স্থায়ী_জেলা"></div>
-            <div class="col-33 form-group"><label>উপজেলা/পৌরসভা</label><input type="text" name="স্থায়ী_উপজেলা"></div>
-        </div>
-        <div class="row">
-            <div class="col-50 form-group"><label>পোস্ট কোড</label><input type="text" name="স্থায়ী_পোস্ট_কোড"></div>
-            <div class="col-50 form-group"><label>গ্রাম/বাড়ি নং/রোড নং</label><input type="text" name="স্থায়ী_গ্রাম_বাড়ি"></div>
-        </div>
-
-        <h4>(খ) বর্তমান ঠিকানা</h4>
-        <div class="row">
-            <div class="col-33 form-group"><label>বিভাগ</label><input type="text" name="বর্তমান_বিভাগ"></div>
-            <div class="col-33 form-group"><label>জেলা</label><input type="text" name="বর্তমান_জেলা"></div>
-            <div class="col-33 form-group"><label>উপজেলা/পৌরসভা</label><input type="text" name="বর্তমান_উপজেলা"></div>
-        </div>
-        <div class="row">
-            <div class="col-50 form-group"><label>পোস্ট কোড</label><input type="text" name="বর্তমান_পোস্ট_কোড"></div>
-            <div class="col-50 form-group"><label>গ্রাম/বাড়ি নং/রোড নং</label><input type="text" name="বর্তমান_গ্রাম_বাড়ি"></div>
+        <!-- ২৩. যোগাযোগের তথ্য ও ঘরের জিও লোকেশন -->
+        <div class="section-title">২৩. যোগাযোগের তথ্য ও ঘরের জিও লোকেশন (GPS)</div>
+        
+        <!-- ঘরের জিও লোকেশন (GPS) -->
+        <div style="background: #e8f4fd; padding: 15px; border-radius: 5px; margin-bottom: 15px; border: 1px solid #b3e5fc;">
+            <label style="color: #0288d1; font-size: 15px;">📍 ঘরের জিও-লোকেশন (Geo-Location / GPS Coordinates):</label>
+            <button type="button" id="geo-btn" class="btn-geo" onclick="getLocation()">আমার বর্তমান ঘরের লোকেশন বের করুন</button>
+            <p id="geo-status" style="font-size: 13px; color: #0288d1; margin: 5px 0; font-weight: bold;"></p>
+            <div class="row">
+                <div class="col-50 form-group">
+                    <label>অক্ষাংশ (Latitude) <span class="req">*</span></label>
+                    <input type="text" id="lat" name="২৩. ঘরের জিও লোকেশন (Latitude)" readonly style="background:#fff;" required placeholder="GPS বাটনে ক্লিক করুন">
+                </div>
+                <div class="col-50 form-group">
+                    <label>দ্রাঘিমাংশ (Longitude) <span class="req">*</span></label>
+                    <input type="text" id="lng" name="২৩. ঘরের জিও লোকেশন (Longitude)" readonly style="background:#fff;" required placeholder="GPS বাটনে ক্লিক করুন">
+                </div>
+            </div>
         </div>
 
-        <!-- ২৪-৩১ আর্থিক ও সামাজিক তথ্য -->
-        <div class="section-title">২৪-৩১. সামাজিক ও আর্থিক তথ্য</div>
+        <h4>(ক) স্থায়ী ঠিকানা <span class="req">*</span></h4>
+        <div class="row">
+            <div class="col-50 form-group"><label>(১) বিভাগ <span class="req">*</span></label><input type="text" name="স্থায়ী_বিভাগ" required></div>
+            <div class="col-50 form-group"><label>(২) জেলা <span class="req">*</span></label><input type="text" name="স্থায়ী_জেলা" required></div>
+        </div>
+        <div class="row">
+            <div class="col-50 form-group"><label>(৩) উপজেলা/জেলা পৌরসভা/সিটি কর্পোরেশন <span class="req">*</span></label><input type="text" name="স্থায়ী_উপজেলা" required></div>
+            <div class="col-50 form-group"><label>(৪) পোস্ট কোড <span class="req">*</span></label><input type="text" name="স্থায়ী_পোস্ট_কোড" required></div>
+        </div>
+        <div class="form-group"><label>(৫) গ্রাম/বাড়ি নং, রোড নং, ব্লক নং, সেকশন <span class="req">*</span></label><input type="text" name="স্থায়ী_গ্রাম_বাড়ি" required></div>
+
+        <h4>(খ) বর্তমান ঠিকানা <span class="req">*</span></h4>
+        <div class="row">
+            <div class="col-50 form-group"><label>(১) বিভাগ <span class="req">*</span></label><input type="text" name="বর্তমান_বিভাগ" required></div>
+            <div class="col-50 form-group"><label>(২) জেলা <span class="req">*</span></label><input type="text" name="বর্তমান_জেলা" required></div>
+        </div>
+        <div class="row">
+            <div class="col-50 form-group"><label>(৩) উপজেলা/জেলা পৌরসভা/সিটি কর্পোরেশন <span class="req">*</span></label><input type="text" name="বর্তমান_উপজেলা" required></div>
+            <div class="col-50 form-group"><label>(৪) পোস্ট কোড <span class="req">*</span></label><input type="text" name="বর্তমান_পোস্ট_কোড" required></div>
+        </div>
+        <div class="form-group"><label>(৫) গ্রাম/বাড়ি নং, রোড নং, ব্লক নং, সেকশন <span class="req">*</span></label><input type="text" name="বর্তমান_গ্রাম_বাড়ি" required></div>
+
+        <!-- ২৪-৩৩ সামাজিক, আর্থিক ও ব্যাংক তথ্য -->
+        <div class="section-title">২৪-৩৩. খানা, আর্থিক ও ব্যাংক তথ্য</div>
         <div class="form-group">
-            <label>২৪. স্বাস্থ্যগত/কর্মক্ষমতা সংক্রান্ত তথ্য</label>
+            <label>২৪. স্বাস্থ্যগত/কর্মক্ষমতা সংক্রান্ত তথ্য <span class="req">*</span></label>
             <div class="radio-group">
                 <label class="radio-item"><input type="radio" name="২৪. স্বাস্থ্যগত অবস্থা" value="কর্মক্ষম"> (১) কর্মক্ষম</label>
                 <label class="radio-item"><input type="radio" name="২৪. স্বাস্থ্যগত অবস্থা" value="সম্পূর্ণ অক্ষম"> (২) সম্পূর্ণ অক্ষম</label>
@@ -493,85 +465,405 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-50 form-group">
-                <label>২৫. পরিবার/খানার সদস্য সংখ্যা</label>
-                <select name="২৫. পরিবার সদস্য সংখ্যা">
-                    <option>২ সদস্য বা তার কম</option>
-                    <option>৩ বা ৪ সদস্য</option>
-                    <option>৫ বা ৬ সদস্য</option>
-                    <option>৭ বা তার বেশি</option>
-                </select>
-            </div>
-            <div class="col-50 form-group">
-                <label>২৯. বার্ষিক আয় (টাকায়)</label>
-                <input type="number" name="২৯. বার্ষিক আয়" placeholder="যেমন: ১২০০০">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-33 form-group"><label>২৬. শিশু সদস্য সংখ্যা</label><input type="number" name="২৬. শিশু সদস্য" value="0"></div>
-            <div class="col-33 form-group"><label>২৭. পুরুষ সদস্য সংখ্যা</label><input type="number" name="২৭. পুরুষ সদস্য" value="0"></div>
-            <div class="col-33 form-group"><label>২৮. নারী সদস্য সংখ্যা</label><input type="number" name="২৮. নারী সদস্য" value="0"></div>
-        </div>
-
         <div class="form-group">
-            <label>৩০. ভূমির মালিকানা</label>
-            <select name="৩০. ভূমির মালিকানা">
-                <option>(১) বাস্তুভিটাহীন</option>
-                <option>(২) ১০ শতকের নিচে</option>
-                <option>(৩) ১০-৫০ শতক পর্যন্ত</option>
-                <option>(৪) ৫০ শতক থেকে ১ একর</option>
-                <option>(৫) ০১ একরের উর্ধ্বে</option>
-            </select>
-        </div>
-
-        <!-- ৩২. ব্যাংক তথ্য -->
-        <div class="section-title">৩২. ব্যাংক/এমএফএস তথ্য (আবেদনকারীর এনআইডি নিবন্ধিত)</div>
-        <div class="form-group">
-            <label>(ক) একাউন্টের মালিকানা:</label>
+            <label>২৫. পরিবার/খানার সদস্যদের সংখ্যা <span class="req">*</span></label>
             <div class="radio-group">
-                <label class="radio-item"><input type="radio" name="৩২a. ব্যাংক মালিকানা" value="নিজ"> নিজ</label>
-                <label class="radio-item"><input type="radio" name="৩২a. ব্যাংক মালিকানা" value="পরিবারের সদস্য"> পরিবারের সদস্য</label>
-                <label class="radio-item"><input type="radio" name="৩২a. ব্যাংক মালিকানা" value="নিকট আত্মীয়"> নিকট আত্মীয়</label>
+                <label class="radio-item"><input type="radio" name="২৫. খানা সদস্য সংখ্যা" value="২ সদস্য বা তার কম"> (১) ২ সদস্য বা তার কম</label>
+                <label class="radio-item"><input type="radio" name="২৫. খানা সদস্য সংখ্যা" value="৩ বা ৪ সদস্য"> (২) ৩ বা ৪ সদস্য</label>
+                <label class="radio-item"><input type="radio" name="২৫. খানা সদস্য সংখ্যা" value="৫ বা ৬ সদস্য"> (৩) ৫ বা ৬ সদস্য</label>
+                <label class="radio-item"><input type="radio" name="২৫. খানা সদস্য সংখ্যা" value="৭ বা তার বেশি"> (৪) ৭ বা তার বেশি</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-33 form-group"><label>২৬. শিশু সদস্য সংখ্যা <span class="req">*</span></label><input type="number" name="২৬. শিশু সদস্য" required></div>
+            <div class="col-33 form-group"><label>২৭. পুরুষ সদস্য সংখ্যা <span class="req">*</span></label><input type="number" name="২৭. পুরুষ সদস্য" required></div>
+            <div class="col-33 form-group"><label>২৮. নারী সদস্য সংখ্যা <span class="req">*</span></label><input type="number" name="২৮. নারী সদস্য" required></div>
+        </div>
+
+        <div class="form-group">
+            <label>২৯. বার্ষিক আয় <span class="req">*</span></label>
+            <input type="number" name="২৯. বার্ষিক আয়" placeholder="টাকায় লিখুন" required>
+        </div>
+
+        <div class="form-group">
+            <label>৩০. ভূমির মালিকানা <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩০. ভূমির মালিকানা" value="বাস্তুভিটাহীন"> (১) বাস্তুভিটাহীন</label>
+                <label class="radio-item"><input type="radio" name="৩০. ভূমির মালিকানা" value="১০ শতকের নিচে"> (২) ১০ শতকের নিচে</label>
+                <label class="radio-item"><input type="radio" name="৩০. ভূমির মালিকানা" value="১০-৫০ শতক পর্যন্ত"> (৩) ১০-৫০ শতক পর্যন্ত</label>
+                <label class="radio-item"><input type="radio" name="৩০. ভূমির মালিকানা" value="৫০ শতক থেকে ১ একর"> (৪) ৫০ শতক থেকে ১ একর</label>
+                <label class="radio-item"><input type="radio" name="৩০. ভূমির মালিকানা" value="০১ একরের উর্ধ্বে"> (৫) ০১ একরের উর্ধ্বে</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৩১. সমাজসেবা অধিদপ্তর থেকে কোন প্রশিক্ষণ বা আর্থিক সুবিধা গ্রহণ করেছেন <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩১. সমাজসেবা সুবিধা" value="হ্যাঁ"> (১) হ্যাঁ</label>
+                <label class="radio-item"><input type="radio" name="৩১. সমাজসেবা সুবিধা" value="না"> (২) না</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৩২. ব্যাংক/এমএফএস তথ্য- (যেকোন একটি এবং অবশ্যই আবেদনকারীর এনআইডি নিবন্ধিত) <span class="req">*</span></label>
+            <h4>(১) ব্যাংক হিসাব-</h4>
+            <div class="form-group">
+                <label>(ক) একাউন্টের মালিকানা:</label>
+                <div class="radio-group">
+                    <label class="radio-item"><input type="radio" name="৩২. ক. একাউন্টের মালিকানা" value="নিজ"> (১) নিজ</label>
+                    <label class="radio-item"><input type="radio" name="৩২. ক. একাউন্টের মালিকানা" value="পরিবারের সদস্য"> (২) পরিবারের সদস্য</label>
+                    <label class="radio-item"><input type="radio" name="৩২. ক. একাউন্টের মালিকানা" value="নিকট আত্মীয়"> (৩) নিকট আত্মীয়</label>
+                    <label class="radio-item"><input type="radio" name="৩২. ক. একাউন্টের মালিকানা" value="অন্যান্য"> (৪) অন্যান্য</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-50 form-group"><label>(খ) ব্যাংক একাউন্ট নম্বর <span class="req">*</span></label><input type="text" name="৩২. খ. ব্যাংক একাউন্ট নম্বর"></div>
+                <div class="col-50 form-group"><label>(গ) ব্যাংকের নাম <span class="req">*</span></label><input type="text" name="৩২. গ. ব্যাংকের নাম"></div>
+            </div>
+            <div class="row">
+                <div class="col-33 form-group"><label>(ঘ) ব্যাংক শাখার নাম <span class="req">*</span></label><input type="text" name="৩২. ঘ. ব্যাংক শাখা"></div>
+                <div class="col-33 form-group"><label>(ঙ) ইমেইল (যদি থাকে)</label><input type="email" name="৩২. ঙ. ইমেইল"></div>
+                <div class="col-33 form-group"><label>(চ) হিসাবকারীর নাম</label><input type="text" name="৩২. চ. হিসাবকারীর নাম"></div>
+            </div>
+            <h4>(২) এমএফএস মোবাইল নম্বর <span class="req">*</span></h4>
+            <input type="text" name="৩২. ২. এমএফএস মোবাইল নম্বর" placeholder="বিকাশ / নগদ / রকেট নম্বর">
+        </div>
+
+        <!-- ৩৩. নমিনি -->
+        <div class="section-title">৩৩. নমিনির তথ্য</div>
+        <div class="form-group">
+            <label>৩৩. আপনি কি নমিনীর তথ্য প্রদান করতে চান (তথ্য বাধ্যতামূলক নয়)</label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩৩. নমিনি দিতে চান" value="হ্যাঁ"> (১) হ্যাঁ</label>
+                <label class="radio-item"><input type="radio" name="৩৩. নমিনি দিতে চান" value="না"> (২) না</label>
             </div>
         </div>
         <div class="row">
-            <div class="col-50 form-group"><label>(খ) ব্যাংক একাউন্ট নম্বর</label><input type="text" name="৩২b. ব্যাংক একাউন্ট নম্বর"></div>
-            <div class="col-50 form-group"><label>(গ) ব্যাংকের নাম</label><input type="text" name="৩২c. ব্যাংকের নাম"></div>
+            <div class="col-50 form-group"><label>i. সম্পূর্ণ নাম (বাংলা) <span class="req">*</span></label><input type="text" name="৩৩. i. নমিনি নাম (বাংলা)"></div>
+            <div class="col-50 form-group"><label>ii. সম্পূর্ণ নাম (ইংরেজি) <span class="req">*</span></label><input type="text" name="৩৩. ii. নমিনি নাম (ইংরেজি)"></div>
         </div>
         <div class="row">
-            <div class="col-50 form-group"><label>(ঘ) ব্যাংক শাখার নাম</label><input type="text" name="৩২d. ব্যাংক শাখা"></div>
-            <div class="col-50 form-group"><label>(২) এমএফএস (বিকাশ/নগদ) নম্বর</label><input type="text" name="৩২e. এমএফএস নম্বর"></div>
+            <div class="col-33 form-group"><label>iii. জাতীয় পরিচিতি নম্বর (এনআইডি) <span class="req">*</span></label><input type="text" name="৩৩. iii. নমিনি এনআইডি"></div>
+            <div class="col-33 form-group"><label>iv. জন্ম তারিখ <span class="req">*</span></label><input type="date" name="৩৩. iv. নমিনি জন্ম তারিখ"></div>
+            <div class="col-33 form-group"><label>v. ঠিকানা</label><input type="text" name="৩৩. v. নমিনি ঠিকানা"></div>
+        </div>
+        <div class="form-group"><label>vi. নমিনীর সাথে সম্পর্ক</label><input type="text" name="৩৩. vi. নমিনি সম্পর্ক"></div>
+
+        <!-- ৩৪-৪৪ খানা প্রধান ও আবাসনের তথ্য -->
+        <div class="section-title">৩৪-৪৪. খানা প্রধান ও ঘরবাড়ির অবস্থা</div>
+        <div class="form-group">
+            <label>৩৪. খানার প্রধানের বয়স (আবেদনকারী নিজে কিংবা অন্য সদস্য হতে পারে) <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩৪. খানা প্রধানের বয়স" value="২০-৪০ বছর"> (১) ২০-৪০ বছর</label>
+                <label class="radio-item"><input type="radio" name="৩৪. খানা প্রধানের বয়স" value="৪০-৬০ বছর"> (২) ৪০-৬০ বছর</label>
+                <label class="radio-item"><input type="radio" name="৩৪. খানা প্রধানের বয়স" value="৬০ বছরের বেশি"> (৩) ৬০ বছরের বেশি</label>
+            </div>
         </div>
 
-        <!-- ৩৩. নমিনির তথ্য -->
-        <div class="section-title">৩৩. নমিনির তথ্য (তথ্য বাধ্যতামূলক নয়)</div>
-        <div class="row">
-            <div class="col-50 form-group"><label>i. সম্পূর্ণ নাম (বাংলা)</label><input type="text" name="নমিনি নাম (বাংলা)"></div>
-            <div class="col-50 form-group"><label>ii. সম্পূর্ণ নাম (ইংরেজি)</label><input type="text" name="নমিনি নাম (ইংরেজি)"></div>
+        <div class="form-group">
+            <label>৩৫. খানা প্রধানের শিক্ষা (সর্বোচ্চ ডিগ্রি সম্পন্ন) <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩৫. খানা প্রধানের শিক্ষা" value="ক্লাস ১-৫"> (১) ক্লাস ১-৫ এর মধ্যে</label>
+                <label class="radio-item"><input type="radio" name="৩৫. খানা প্রধানের শিক্ষা" value="ক্লাস ৬-৯"> (২) ক্লাস ৬-৯ এর মধ্যে</label>
+                <label class="radio-item"><input type="radio" name="৩৫. খানা প্রধানের শিক্ষা" value="ক্লাস ১০-১২ এর উপরে"> (৩) ক্লাস ১০-১২ এর উপরে</label>
+                <label class="radio-item"><input type="radio" name="৩৫. খানা প্রধানের শিক্ষা" value="স্নাতক/স্নাতকোত্তর"> (৪) স্নাতক/স্নাতকোত্তর</label>
+                <label class="radio-item"><input type="radio" name="৩৫. খানা প্রধানের শিক্ষা" value="নিরক্ষর"> (৫) নিরক্ষর</label>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-50 form-group"><label>iii. জাতীয় পরিচয়পত্র (এনআইডি)</label><input type="text" name="নমিনি এনআইডি"></div>
-            <div class="col-50 form-group"><label>iv. সম্পর্কের ধরন</label><input type="text" name="নমিনি সম্পর্ক"></div>
+
+        <div class="form-group">
+            <label>৩৬. খানা প্রধানের স্বামী/স্ত্রীর শিক্ষা (সর্বোচ্চ ডিগ্রি সম্পন্ন) <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩৬. স্বামী/স্ত্রীর শিক্ষা" value="ক্লাস ১-৫"> (১) ক্লাস ১-৫ শ্রেণি পর্যন্ত</label>
+                <label class="radio-item"><input type="radio" name="৩৬. স্বামী/স্ত্রীর শিক্ষা" value="ক্লাস ৬-৯"> (২) ক্লাস ৬-৯ শ্রেণি পর্যন্ত</label>
+                <label class="radio-item"><input type="radio" name="৩৬. স্বামী/স্ত্রীর শিক্ষা" value="ক্লাস ১০ শ্রেণির বেশী"> (৩) ক্লাস ১০ শ্রেণির বেশী</label>
+                <label class="radio-item"><input type="radio" name="৩৬. স্বামী/স্ত্রীর শিক্ষা" value="স্নাতক/স্নাতকোত্তর"> (৪) স্নাতক/স্নাতকোত্তর</label>
+                <label class="radio-item"><input type="radio" name="৩৬. স্বামী/স্ত্রীর শিক্ষা" value="নিরক্ষর"> (৫) নিরক্ষর</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৩৭. আপনার খানার কোন সদস্য কি কৃষি অথবা অকৃষি শ্রমিক হিসেবে নিয়োজিত আছেন? <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩৭. শ্রমিক হিসেবে নিয়োজিত" value="কৃষি খাতে শ্রম"> (১) কৃষি খাতে শ্রম</label>
+                <label class="radio-item"><input type="radio" name="৩৭. শ্রমিক হিসেবে নিয়োজিত" value="অকৃষি খাতে শ্রম"> (২) অকৃষি খাতে শ্রম</label>
+                <label class="radio-item"><input type="radio" name="৩৭. শ্রমিক হিসেবে নিয়োজিত" value="কোন কাজ করে না"> (৩) কোন কাজ করে না</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৩৮. আপনার খানার সকল সদস্যের মালিকানাধীন মোট জমির পরিমাণ কত? <span class="req">*</span></label>
+            <p><b>(ক) কৃষি জমি:</b></p>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩৮. ক. কৃষি জমি" value="১০ শতকের নিচে"> (১) ১০ শতকের নিচে</label>
+                <label class="radio-item"><input type="radio" name="৩৮. ক. কৃষি জমি" value="১০-৫০ শতক পর্যন্ত"> (২) ১০-৫০ শতক পর্যন্ত</label>
+                <label class="radio-item"><input type="radio" name="৩৮. ক. কৃষি জমি" value="৫০ শতক থেকে ১ একর"> (৩) ৫০ শতক থেকে ১ একর</label>
+                <label class="radio-item"><input type="radio" name="৩৮. ক. কৃষি জমি" value="০১ একরের উর্ধ্বে"> (৪) ০১ একরের উর্ধ্বে (গত ১ বছরে)</label>
+            </div>
+            <p><b>(খ) অকৃষি জমি:</b></p>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩৮. খ. অকৃষি জমি" value="১০ শতকের নিচে"> (১) ১০ শতকের নিচে</label>
+                <label class="radio-item"><input type="radio" name="৩৮. খ. অকৃষি জমি" value="১০-৫০ শতক পর্যন্ত"> (২) ১০-৫০ শতক পর্যন্ত</label>
+                <label class="radio-item"><input type="radio" name="৩৮. খ. অকৃষি জমি" value="৫০ শতক থেকে ১ একর"> (৩) ৫০ শতক থেকে ১ একর</label>
+                <label class="radio-item"><input type="radio" name="৩৮. খ. অকৃষি জমি" value="০১ একরের উর্ধ্বে"> (৪) ০১ একরের উর্ধ্বে (গত ১ বছরে)</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৩৯. বিদেশে অবস্থানরত কারো নিকট হতে কোন অর্থ গ্রহণ করেছে কি? <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৩৯. রেমিটেন্স গ্রহণ" value="হ্যাঁ"> (১) হ্যাঁ</label>
+                <label class="radio-item"><input type="radio" name="৩৯. রেমিটেন্স গ্রহণ" value="না"> (২) না</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৪০. আপনার প্রধান ঘরের দেয়াল কি দিয়ে তৈরী? <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৪০. ঘরের দেয়াল" value="টিন/কাঠ"> (১) টিন/কাঠ</label>
+                <label class="radio-item"><input type="radio" name="৪০. ঘরের দেয়াল" value="খড়/বাঁশ"> (২) খড়/বাঁশ</label>
+                <label class="radio-item"><input type="radio" name="৪০. ঘরের দেয়াল" value="মাটির"> (৩) মাটির</label>
+                <label class="radio-item"><input type="radio" name="৪০. ঘরের দেয়াল" value="ইটের"> (৪) ইটের</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৪১. আপনার খানায় খাবার ঘর কি পৃথক আছে? <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৪১. খাবার ঘর পৃথক" value="হ্যাঁ"> (১) হ্যাঁ</label>
+                <label class="radio-item"><input type="radio" name="৪১. খাবার ঘর পৃথক" value="না"> (২) না</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৪২. আপনার খানায় রান্নাঘর কি পৃথক আছে? <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৪২. রান্নাঘর পৃথক" value="হ্যাঁ"> (১) হ্যাঁ</label>
+                <label class="radio-item"><input type="radio" name="৪২. রান্নাঘর পৃথক" value="না"> (২) না</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৪৩. আপনার খানায় খাবার পানির উৎস কি? <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৪৩. খাবার পানির উৎস" value="টিউবওয়েল"> (১) টিউবওয়েল</label>
+                <label class="radio-item"><input type="radio" name="৪৩. খাবার পানির উৎস" value="গণসরবরাহ লাইন"> (২) গণসরবরাহ লাইন</label>
+                <label class="radio-item"><input type="radio" name="৪৩. খাবার পানির উৎস" value="ঝরনা/নদী/পুকুর"> (৩) ঝরনা/নদী/পুকুর</label>
+                <label class="radio-item"><input type="radio" name="৪৩. খাবার পানির উৎস" value="অভ্যন্তরীণ সরবরাহ লাইন"> (৪) অভ্যন্তরীণ সরবরাহ লাইন</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৪৪. খানার সদস্যগণ কি ধরণের পায়খানা/টয়লেট ব্যবহার করে? <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৪৪. টয়লেট টাইপ" value="স্যানিটারি ল্যাট্রিন"> (১) স্যানিটারি ল্যাট্রিন</label>
+                <label class="radio-item"><input type="radio" name="৪৪. টয়লেট টাইপ" value="পিট/গর্ত"> (২) পিট/গর্ত</label>
+                <label class="radio-item"><input type="radio" name="৪৪. টয়লেট টাইপ" value="কাঁচা/ঝুলন্ত"> (৩) কাঁচা/ঝুলন্ত</label>
+            </div>
         </div>
 
         <!-- ৪৫. খানার সম্পদ -->
-        <div class="section-title">৪৫. আপনার খানার মালিকানাধীন সম্পদের তালিকা (টিক দিন)</div>
+        <div class="section-title">৪৫. আপনার খানার মালিকানাধীন নিম্নের পরিসম্পদ গুলোর কোনটি আছে? (টিক চিহ্ন দিন)</div>
         <div class="grid-checkboxes">
-            <label class="checkbox-item"><input type="checkbox" name="সম্পদ[]" value="কম্পিউটার/ল্যাপটপ"> কম্পিউটার/ল্যাপটপ</label>
-            <label class="checkbox-item"><input type="checkbox" name="সম্পদ[]" value="রেফ্রিজারেটর/ওভেন"> রেফ্রিজারেটর/ওভেন</label>
-            <label class="checkbox-item"><input type="checkbox" name="সম্পদ[]" value="গাড়ি"> গাড়ি</label>
-            <label class="checkbox-item"><input type="checkbox" name="সম্পদ[]" value="মোটর সাইকেল"> মোটর সাইকেল</label>
-            <label class="checkbox-item"><input type="checkbox" name="সম্পদ[]" value="টেলিভিশন"> টেলিভিশন</label>
-            <label class="checkbox-item"><input type="checkbox" name="সম্পদ[]" value="মোবাইল ফোন"> মোবাইল ফোন</label>
-            <label class="checkbox-item"><input type="checkbox" name="সম্পদ[]" value="এসি/হিটার"> এসি/হিটার</label>
-            <label class="checkbox-item"><input type="checkbox" name="সম্পদ[]" value="পাওয়ার টিলার"> পাওয়ার টিলার</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="কম্পিউটার/ল্যাপটপ"> i. কম্পিউটার/ল্যাপটপ</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="রেডিও/ক্যাসেট প্লেয়ার/টু-ইন-ওয়ান"> ii. রেডিও/ক্যাসেট প্লেয়ার/টু-ইন-ওয়ান</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="গাড়ি"> iii. গাড়ি</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="মোটর সাইকেল"> iv. মোটর সাইকেল</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="নৌকা"> v. নৌকা</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="সাইকেল"> vi. সাইকেল</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="বৈদ্যুতিক পাখা"> vii. বৈদ্যুতিক পাখা</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="রেফ্রিজারেটর/ওভেন/ওয়াশিং মেশিন"> viii. রেফ্রিজারেটর/ওভেন/ওয়াশিং মেশিন</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="টেলিভিশন"> ix. টেলিভিশন</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="ভিসিআর/ভিসিপি/ডিশ সংযোগ"> x. ভিসিআর/ভিসিপি/ডিশ সংযোগ</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="আসবাবপত্র"> xi. আসবাবপত্র</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="কার্পেট"> xii. কার্পেট</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="হিটার"> xiii. হিটার</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="মোবাইল ফোন"> xiv. মোবাইল ফোন</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="ক্যামেরা"> xv. ক্যামেরা</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="পানির জন্য পাওয়ার পাম্প বা হ্যান্ড পাম্প"> xvi. পানির জন্য পাওয়ার পাম্প বা হ্যান্ড পাম্প</label>
+            <label class="checkbox-item"><input type="checkbox" name="৪৫. সম্পদ[]" value="পাওয়ার টিলার"> xvii. পাওয়ার টিলার</label>
+        </div>
+
+        <!-- ৪৬-৪৭ ঘরের ছাদ ও কক্ষ -->
+        <div class="section-title">৪৬-৪৭. ঘরের গঠন ও কক্ষ</div>
+        <div class="form-group">
+            <label>৪৬. আপনার প্রধান ঘরের ছাদ কি দিয়ে তৈরী? <span class="req">*</span></label>
+            <div class="radio-group">
+                <label class="radio-item"><input type="radio" name="৪৬. ঘরের ছাদ" value="টিন/কাঠ"> (১) টিন/কাঠ</label>
+                <label class="radio-item"><input type="radio" name="৪৬. ঘরের ছাদ" value="বাঁশ/খড়"> (২) বাঁশ/খড়</label>
+                <label class="radio-item"><input type="radio" name="৪৬. ঘরের ছাদ" value="কংক্রিট"> (৩) কংক্রিট</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>৪৭. কক্ষের সংখ্যা <span class="req">*</span></label>
+            <input type="number" name="৪৭. কক্ষের সংখ্যা" placeholder="যেমন: ৩" required>
+        </div>
+
+        <!-- ৪৮. পরিবারের সদস্য পরিচিতি টেবিল -->
+        <div class="section-title">৪৮. পরিবারের সদস্যের পরিচিতি</div>
+        <div style="overflow-x:auto;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>পরিচিতি ডকুমেন্ট</th>
+                        <th>পরিচিতি নম্বর</th>
+                        <th>পরিচিতি নাম (যেভাবে কার্ডে লেখা আছে ঠিক সেভাবে)</th>
+                        <th>পরিবারের সদস্যের সাথে আবেদনকারীর সম্পর্ক</th>
+                        <th>বাৎসরিক আয় (আনুমানিক, টাকায়)</th>
+                        <th>সরকারি চাকুরিজীবী/MPO ভুক্ত শিক্ষক কি না (টিক দিন)</th>
+                        <th>সদস্যদের কেউ প্রতিবন্ধী রয়েছে কিনা (টিক দিন)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- সদস্য ১ -->
+                    <tr>
+                        <td style="text-align:left;">সদস্য-১ (এনআইডি)</td>
+                        <td><input type="text" name="সদস্য১_এনআইডি_নম্বর"></td>
+                        <td><input type="text" name="সদস্য১_এনআইডি_নাম"></td>
+                        <td><input type="text" name="সদস্য১_সম্পর্ক"></td>
+                        <td><input type="number" name="সদস্য১_আয়"></td>
+                        <td><input type="checkbox" name="সদস্য১_সরকারি_চাকরি" value="হ্যাঁ"></td>
+                        <td><input type="checkbox" name="সদস্য১_প্রতিবন্ধী" value="হ্যাঁ"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">সদস্য-১ (জন্ম নিবন্ধন)</td>
+                        <td><input type="text" name="সদস্য১_জন্মনিবন্ধন_নম্বর"></td>
+                        <td><input type="text" name="সদস্য১_জন্মনিবন্ধন_নাম"></td>
+                        <td colspan="4" style="background:#f2f2f2;"></td>
+                    </tr>
+                    <!-- সদস্য ২ -->
+                    <tr>
+                        <td style="text-align:left;">সদস্য-২ (এনআইডি)</td>
+                        <td><input type="text" name="সদস্য২_এনআইডি_নম্বর"></td>
+                        <td><input type="text" name="সদস্য২_এনআইডি_নাম"></td>
+                        <td><input type="text" name="সদস্য২_সম্পর্ক"></td>
+                        <td><input type="number" name="সদস্য২_আয়"></td>
+                        <td><input type="checkbox" name="সদস্য২_সরকারি_চাকরি" value="হ্যাঁ"></td>
+                        <td><input type="checkbox" name="সদস্য২_প্রতিবন্ধী" value="হ্যাঁ"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">সদস্য-২ (জন্ম নিবন্ধন)</td>
+                        <td><input type="text" name="সদস্য২_জন্মনিবন্ধন_নম্বর"></td>
+                        <td><input type="text" name="সদস্য২_জন্মনিবন্ধন_নাম"></td>
+                        <td colspan="4" style="background:#f2f2f2;"></td>
+                    </tr>
+                    <!-- সদস্য ৩ -->
+                    <tr>
+                        <td style="text-align:left;">সদস্য-৩ (এনআইডি)</td>
+                        <td><input type="text" name="সদস্য৩_এনআইডি_নম্বর"></td>
+                        <td><input type="text" name="সদস্য৩_এনআইডি_নাম"></td>
+                        <td><input type="text" name="সদস্য৩_সম্পর্ক"></td>
+                        <td><input type="number" name="সদস্য৩_আয়"></td>
+                        <td><input type="checkbox" name="সদস্য৩_সরকারি_চাকরি" value="হ্যাঁ"></td>
+                        <td><input type="checkbox" name="সদস্য৩_প্রতিবন্ধী" value="হ্যাঁ"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">সদস্য-৩ (জন্ম নিবন্ধন)</td>
+                        <td><input type="text" name="সদস্য৩_জন্মনিবন্ধন_নম্বর"></td>
+                        <td><input type="text" name="সদস্য৩_জন্মনিবন্ধন_নাম"></td>
+                        <td colspan="4" style="background:#f2f2f2;"></td>
+                    </tr>
+                    <!-- সদস্য ৪ -->
+                    <tr>
+                        <td style="text-align:left;">সদস্য-৪ (এনআইডি)</td>
+                        <td><input type="text" name="সদস্য৪_এনআইডি_নম্বর"></td>
+                        <td><input type="text" name="সদস্য৪_এনআইডি_নাম"></td>
+                        <td><input type="text" name="সদস্য৪_সম্পর্ক"></td>
+                        <td><input type="number" name="সদস্য৪_আয়"></td>
+                        <td><input type="checkbox" name="সদস্য৪_সরকারি_চাকরি" value="হ্যাঁ"></td>
+                        <td><input type="checkbox" name="সদস্য৪_প্রতিবন্ধী" value="হ্যাঁ"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">সদস্য-৪ (জন্ম নিবন্ধন)</td>
+                        <td><input type="text" name="সদস্য৪_জন্মনিবন্ধন_নম্বর"></td>
+                        <td><input type="text" name="সদস্য৪_জন্মনিবন্ধন_নাম"></td>
+                        <td colspan="4" style="background:#f2f2f2;"></td>
+                    </tr>
+                    <!-- সদস্য ৫ -->
+                    <tr>
+                        <td style="text-align:left;">সদস্য-৫ (এনআইডি)</td>
+                        <td><input type="text" name="সদস্য৫_এনআইডি_নম্বর"></td>
+                        <td><input type="text" name="সদস্য৫_এনআইডি_নাম"></td>
+                        <td><input type="text" name="সদস্য৫_সম্পর্ক"></td>
+                        <td><input type="number" name="সদস্য৫_আয়"></td>
+                        <td><input type="checkbox" name="সদস্য৫_সরকারি_চাকরি" value="হ্যাঁ"></td>
+                        <td><input type="checkbox" name="সদস্য৫_প্রতিবন্ধী" value="হ্যাঁ"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left;">সদস্য-৫ (জন্ম নিবন্ধন)</td>
+                        <td><input type="text" name="সদস্য৫_জন্মনিবন্ধন_নম্বর"></td>
+                        <td><input type="text" name="সদস্য৫_জন্মনিবন্ধন_নাম"></td>
+                        <td colspan="4" style="background:#f2f2f2;"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <button type="submit" class="btn-submit">আবেদন জমা দিন</button>
     </form>
 </div>
+
+<!-- জিও-লোকেশন (GPS) বের করার উন্নত JavaScript (Best Practice) -->
+<script>
+    function getLocation() {
+        var status = document.getElementById("geo-status");
+        var btn = document.getElementById("geo-btn");
+
+        if (navigator.geolocation) {
+            status.style.color = "#0288d1";
+            status.innerText = "⏳ জিপিএস লোকেশন নেওয়া হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...";
+            btn.disabled = true;
+
+            // GPS Best Practices Options
+            var geoOptions = {
+                enableHighAccuracy: true, // সর্বোচ্চ একিউরেসি নিশ্চিত করবে
+                timeout: 10000,          // ১০ সেকেন্ড অপেক্ষা করবে
+                maximumAge: 0            // কোনো ক্যাশড লোকেশন ব্যবহার করবে না
+            };
+
+            navigator.geolocation.getCurrentPosition(showPosition, showError, geoOptions);
+        } else { 
+            status.style.color = "red";
+            status.innerText = "❌ আপনার ব্রাউজার বা ডিভাইসে জিপিএস সাপোর্ট করে না।";
+        }
+    }
+
+    function showPosition(position) {
+        var status = document.getElementById("geo-status");
+        var btn = document.getElementById("geo-btn");
+
+        document.getElementById("lat").value = position.coords.latitude;
+        document.getElementById("lng").value = position.coords.longitude;
+
+        status.style.color = "green";
+        status.innerText = "✔ জিপিএস লোকেশন সফলভাবে যোগ করা হয়েছে! (Accuracy: ±" + Math.round(position.coords.accuracy) + " meters)";
+        btn.disabled = false;
+    }
+
+    function showError(error) {
+        var status = document.getElementById("geo-status");
+        var btn = document.getElementById("geo-btn");
+        btn.disabled = false;
+        status.style.color = "red";
+
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                status.innerText = "❌ লোকেশনের পারমিশন দেওয়া হয়নি। দয়া করে ব্রাউজার থেকে Location/GPS Allow করুন।";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                status.innerText = "❌ জিপিএস সংকেত বা লোকেশন সার্ভিস পাওয়া যাচ্ছে না।";
+                break;
+            case error.TIMEOUT:
+                status.innerText = "❌ জিপিএস লোকেশন পেতে সময় বেশি লাগছে। অনুগ্রহ করে খোলা জায়গায় গিয়ে আবার চেষ্টা করুন।";
+                break;
+            case error.UNKNOWN_ERROR:
+                status.innerText = "❌ কোনো অজানা সমস্যা দেখা দিয়েছে।";
+                break;
+        }
+    }
+</script>
 
 </body>
 </html>
